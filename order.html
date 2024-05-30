@@ -1,19 +1,100 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Language" content="en-za" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="./css/styling.css" />
-    <title>ORDER</title>
-  </head>
 
-  <body>
-    <div id="page">
+<head>
+  <meta http-equiv="Content-Language" content="en-za" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="./css/styling.css" />
+  <title>ORDER</title>
+</head>
 
-      <div id="main">
-        
-        
+<body>
+  <div id="page">
+    <div id="banner">
+      <img src="https://yakuphantonintshi.github.io/myimages/Images/delivery.gif" alt="">
+
+      <div id="navigation">
+        <img src="https://yakuphantonintshi.github.io/myimages/Images/links.gif" alt="">
+
       </div>
+
     </div>
-  </body>
+    <div id="sidebar">
+      <img src="https://yakuphantonintshi.github.io/myimages/Images/swegga.jpg" alt="">
+    </div>
+    <div id="main">
+      <form name="orders">
+
+        <table>
+          <caption>Product Summary</caption>
+          <tr>
+            <th>Description</th>
+            <th>Size</th>
+            <th>Colour</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <td> <a href="./female.html">Female Ski Jackets</a></td>
+            <td>
+              <select>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="red">Red</option>
+                <option value="pink">Pink</option>
+                <option value="black">Black</option>
+              </select>
+            </td>
+            <td id="fPrice">150.95</td>
+            <td><input id="f-Quantity" value="2"></td>
+            <td id="fTotalPrice"> </td>
+          </tr>
+
+          <tr>
+            <td><a href="./male.html">Male Ski Jackets</a></td>
+            <td>
+              <select>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="white">White</option>
+              </select>
+            </td>
+            <td>180.95</td>
+            <td><input value="4" id="male-quantity"></td>
+            <td id="maleTotal"> </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              Click to confirm and process your order:
+            </td>
+            <td><button type="button" onclick="calculateTotal()">Total </button></td>
+            <td id="totalPrice"></td>
+          </tr>
+        </table>
+
+    </div>
+
+    <div id="footer">
+      &copy2020 Swegga Fashion - YAKUPHA NTONINTSHI
+
+    </div>
+  </div>
+
+  <script src="./script/code.js"></script>
+</body>
+
 </html>
