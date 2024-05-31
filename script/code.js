@@ -1,16 +1,3 @@
-// function calc(){
-//     let fPrice = document.querySelector('#fprice')
-//     let fTotalPrice = document.querySelector('#fTotalPrice')
-//     let fQuantity = document.querySelector('#fQuantity')
-
-    
-
-//     document.querySelector('#btn').addEventListener('click' , ()=>{
-//         fTotalPrice = fPrice * fQuantity
-//     })
-// }
-// calc()
-
 function calculateTotal(){
     let fPrice = 150.95;
     let mPrice = 180.95;

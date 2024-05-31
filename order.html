@@ -1,100 +1,113 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Language" content="en-za" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="./css/styling.css" />
+    <title>ORDER</title>
+  </head>
 
-<head>
-  <meta http-equiv="Content-Language" content="en-za" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="./css/styling.css" />
-  <title>ORDER</title>
-</head>
-
-<body>
-  <div id="page">
-    <div id="banner">
-      <img src="https://yakuphantonintshi.github.io/myimages/Images/delivery.gif" alt="">
-
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <img
+          src="https://yakuphantonintshi.github.io/myimages/Images/swegga.jpg" id="sidebar-image"
+          alt=""
+        />
+      </div>
+      <div id="banner">
+        <img
+          src="https://yakuphantonintshi.github.io/myimages/Images/delivery.gif"
+          alt="" id="banner-image"
+        />
+      </div>
       <div id="navigation">
-        <img src="https://yakuphantonintshi.github.io/myimages/Images/links.gif" alt="">
+        <img
+          src="https://yakuphantonintshi.github.io/myimages/Images/links.gif"
+          alt="navigation bar" id="nav-links"
+          usemap="#home"
+        />
+        <map name="home">
+          <area shape="rect" coords="10,5,95,35" href="order.html" />
+          <area shape="rect" coords="105,5,190,35" href="services.html" />
+          <area shape="rect" coords="202,5,300,35" href="products.html" />
+          <area shape="rect" coords="310,5,440,35" href="orderStatus.html" />
+          <area shape="rect" coords="450,5,555,35" href="contactUs.html" />
+        </map>
+      </div>
+      <div id="main">
+        <form name="orders">
+          <table>
+            <caption>
+              Product Summary
+            </caption>
+            <tr>
+              <th>Description</th>
+              <th>Size</th>
+              <th>Colour</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td><a href="./female.html">Female Ski Jackets</a></td>
+              <td>
+                <select>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </td>
+              <td>
+                <select>
+                  <option value="red">Red</option>
+                  <option value="pink">Pink</option>
+                  <option value="black">Black</option>
+                </select>
+              </td>
+              <td id="fPrice">150.95</td>
+              <td><input id="f-Quantity" placeholder="2" /></td>
+              <td id="fTotalPrice"></td>
+            </tr>
 
+            <tr>
+              <td><a href="./male.html">Male Ski Jackets</a></td>
+              <td>
+                <select>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </td>
+              <td>
+                <select>
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="white">White</option>
+                </select>
+              </td>
+              <td>180.95</td>
+              <td><input placeholder="4" id="male-quantity" /></td>
+              <td id="maleTotal"></td>
+            </tr>
+            <tr>
+              <td colspan="4">Click to confirm and process your order:</td>
+              <td>
+                <button type="button" onclick="calculateTotal()">
+                  Total Price
+                </button>
+              </td>
+              <td id="totalPrice"></td>
+            </tr>
+          </table>
+        </form>
       </div>
 
-    </div>
-    <div id="sidebar">
-      <img src="https://yakuphantonintshi.github.io/myimages/Images/swegga.jpg" alt="">
-    </div>
-    <div id="main">
-      <form name="orders">
-
-        <table>
-          <caption>Product Summary</caption>
-          <tr>
-            <th>Description</th>
-            <th>Size</th>
-            <th>Colour</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td> <a href="./female.html">Female Ski Jackets</a></td>
-            <td>
-              <select>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-              </select>
-            </td>
-            <td>
-              <select>
-                <option value="red">Red</option>
-                <option value="pink">Pink</option>
-                <option value="black">Black</option>
-              </select>
-            </td>
-            <td id="fPrice">150.95</td>
-            <td><input id="f-Quantity" value="2"></td>
-            <td id="fTotalPrice"> </td>
-          </tr>
-
-          <tr>
-            <td><a href="./male.html">Male Ski Jackets</a></td>
-            <td>
-              <select>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-              </select>
-            </td>
-            <td>
-              <select>
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="white">White</option>
-              </select>
-            </td>
-            <td>180.95</td>
-            <td><input value="4" id="male-quantity"></td>
-            <td id="maleTotal"> </td>
-          </tr>
-          <tr>
-            <td colspan="4">
-              Click to confirm and process your order:
-            </td>
-            <td><button type="button" onclick="calculateTotal()">Total </button></td>
-            <td id="totalPrice"></td>
-          </tr>
-        </table>
-
+      <footer>
+        <p class="copyright">&copy; 2020 Swegga Fashion - YAKUPHA NTONINTSHI</p>
+      </footer>
     </div>
 
-    <div id="footer">
-      &copy2020 Swegga Fashion - YAKUPHA NTONINTSHI
-
-    </div>
-  </div>
-
-  <script src="./script/code.js"></script>
-</body>
-
+    <script src="./script/code.js"></script>
+  </body>
 </html>
